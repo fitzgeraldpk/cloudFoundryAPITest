@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p Organisation Details
+
+    table(class="table" id="resultsTable")
+      thead
+        th Org name
+        th Org Status
+        th Space Details
+      tbody
+        tr
+          td #{result.entity.name}
+          td #{result.entity.status}
+          td 
+            a(href='/org/spaces/#{result.metadata.guid}') Space details
+          td

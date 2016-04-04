@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p Total Results: #{result.total_results}
+    table(class="table" id="resultsTable")
+      thead
+        th Date created
+        th Guid
+        th Url
+      tbody
+        tr
+          td #{result.resources[0].metadata.created_at}
+          td #{result.resources[0].metadata.guid}
+          td 
+            a(href='/org/details/#{result.resources[0].metadata.guid}') org details
+          td

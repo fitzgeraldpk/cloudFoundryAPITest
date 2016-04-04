@@ -1,0 +1,7 @@
+{
+	"host":"http://api.bosh-lite.com/v2",
+	"authUrl":"http://login.bosh-lite.com/oauth/token",
+	"username":"admin",
+	"password":"admin",
+	"grantType":"password"
+}
