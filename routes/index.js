@@ -19,7 +19,7 @@ function getToken (req,res,next){
 					 };
 	httpRequest(tokenOptions,function(error, response, body) {
             if (error) {access_token=null;}
-            if (response.status=200){
+            if (response && response.status===200){
             	var authResult=JSON.parse(response.body);
             	access_token=authResult.access_token;
 		    }else{
@@ -73,6 +73,8 @@ function getSpaceApps(req,res,next,guid,callback){
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+
+router.get('/test',function(req,res,next){res.send('test'); } );
 
 router.get('/orgs', function(req,res,next){if(typeof res.locals.access_token=='undefined'){getToken(req,res,next)}},
 					function (req,res,next){

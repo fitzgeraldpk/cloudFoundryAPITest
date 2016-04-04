@@ -3,3 +3,4 @@ cfapi.sublime-project
 cfapi.sublime-workspace
 npm-debug.log
 /node_modules/*
+.DS_Store
